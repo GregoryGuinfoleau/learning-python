@@ -1,6 +1,6 @@
-# Day 4 - Codecademy Python 3
+# Day 5 - Codecademy Python 3
 # [Titre du sujet - Bugs]
-# Date: April 15, 2026
+# Date: April 16, 2026
 
 # ======================
 # [SECTION 1 - Errors or bugs]
