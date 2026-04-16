@@ -1,5 +1,5 @@
 # Day 03 - Codecademy Python 3
-# [Boolean suite]
+# [Boolean suite, if-elif-else statements]
 # Date: April 10 2026
 
 # ======================
