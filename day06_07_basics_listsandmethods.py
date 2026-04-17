@@ -138,18 +138,10 @@ civilisations_sorted = sorted(civilisations)
 print(civilisations_sorted)
 
 
+
 # ======================
 # CE QUE J'AI COMPRIS
 # ======================
 
 # une méthode modifie la liste choisie
 # une fonction elle produit une valeur attribuable à une variable
-# - Point clé 2
-# - Point clé 3
-# - Ce qui était difficile / ce que je veux revoir
-
-# ======================
-# EXERCICE PRATIQUE (optionnel)
-# ======================
-
-# Si je veux tester ce que j'ai appris avec un exercice perso
