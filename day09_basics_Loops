@@ -1,0 +1,191 @@
+# Day 9 - Codecademy Python 3
+# [Loops]
+# Date: April 20/22, 2026
+
+# ======================
+# [SECTION 1 - le for loops]
+# ======================
+
+# cela permet de repeter, d'itérer une action a grande echelle
+# évitant ainsi une fastidueuse tâche d'encodage...
+# elle s'écrit de cette manière :
+
+# for <temporary variable> in <collection>:
+#   <action>
+
+# Programming best practices suggest we make our temporary variables as descriptive as possible.
+ 
+ingredients = ["milk", "sugar", "vanilla extract", "dough", "chocolate"]
+
+for ingredient in ingredients:
+  print(ingredient)
+
+# Attention à l'indentation !!!
+
+# ======================
+# [SECTION 2 - En utilisant range()]
+# ======================
+
+# On peut créer un itération facilament avec la fonction range
+# Exemple :
+six_steps = range(6)
+
+for temp in range(6):
+  print("Learning Loops!")
+
+
+# six_steps is now a collection with 6 elements:
+# 0, 1, 2, 3, 4, 5
+
+
+# ======================
+# [SECTION 3 - while loops]
+# ======================
+
+# A while loop performs a set of instructions as long as a given condition is true.
+# Ca suit cette syntaxe
+# while <conditional statement>:
+#  <action>
+
+# Ex:
+count = 0
+while count <= 3:
+  # Loop Body
+  print(count)
+  count += 1
+
+# count is initially defined with the value of 0. 
+# The conditional statement in the while loop is count <= 3,
+# which is true at the initial iteration of the loop, so the loop body executes.
+
+# Inside the loop body, count is printed and then incremented by 1.
+# When the first iteration of the loop has finished,
+# Python returns to the top of the loop and checks the conditional again.
+# After the first iteration, count would be equal to 1 so the conditional
+# still evaluates to True and so the loop continues.
+
+# This continues until the count variable becomes 4.
+# At that point, when the conditional is tested
+# it will no longer be True and the loop will stop.
+
+countdown = 10
+while countdown >=0:
+  print(str(countdown))
+  countdown -= 1
+print("We have liftoff!")
+
+# J'ai eu du mal pour afficher une phrase avec les valeurs de la liste.
+# il faut mettre le nom_liste[index] pour que la focntion récupérer chaque valeur a chaque index
+
+# j'ai aussi eu du mal avec l'incrémentation, je me suis trompé de
+# syntaxe, il faut mettre += (j'avais mis =+)
+
+# ======================
+# [SECTION 3 - Infinite loops]
+# ======================
+
+
+# !!! 
+# A loop that never terminates is called an infinite loop.
+# These are very dangerous for our code because they will 
+# make our program run forever and thus consume all of your computer’s resources. 
+#
+
+students_period_A = ["Alex", "Briana", "Cheri", "Daniele"]
+students_period_B = ["Dora", "Minerva", "Alexa", "Obie"]
+
+
+for student in students_period_A:
+  students_period_B.append(student)
+print(students_period_B)
+
+
+# ======================
+# [SECTION 4 - Loop control : break / Continue]
+# ======================
+
+# une fois rencontré ce qu'on cherche, le break statement permet d'arrếter 
+# la loop.
+
+dog_breeds_available_for_adoption = ["french_bulldog", "dalmatian", "shihtzu", "poodle", "collie"]
+dog_breed_I_want = "dalmatian"
+
+for dog_breed in dog_breeds_available_for_adoption :
+  print(dog_breed)
+  if dog_breed == dog_breed_I_want:
+      print("They have the dog I want!")
+      break
+  
+# j'ai eu du mal avec celui là a cause de l'indentation,
+# j'avais mis le if décalé alors qu'il fallait être au
+# même niveau que print.j'avais également oublié le ! 
+
+# avec le continue statment, ca permet d'écarter des valeurs qu'on ne souhaite pas voir et d'afficher celles que l'on veut
+ages = [12, 38, 34, 26, 21, 19, 67, 41, 17]
+
+for adult in ages:
+  if adult < 21:
+    continue
+  print(adult)
+
+
+# ======================
+# [SECTION 5 - Nested Loops]
+# ======================
+
+# Une boucle à l'intérieur d'une boucle
+# cela permet d'accéder a chaque item à l'intérieur d'une sous-liste
+# et bien plus
+# Ex:
+sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
+
+scoops_sold = 0
+
+for location in sales_data:
+  print(location)
+
+for location in sales_data:
+  for scoops_value in location:
+    scoops_sold += scoops_value
+print(scoops_sold)
+
+
+# ======================
+# [SECTION 6 - List comprehensions]
+# ======================
+
+
+# C'est une manière "élégante" (plus rapide) d'écrire une loops dans une liste
+# Ex:
+
+grades = [90, 88, 62, 76, 74, 89, 48, 57]
+scaled_grades = [grade + 10 for grade in grades]
+print(scaled_grades)
+
+# au lieu d'écrire
+grades = [90, 88, 62, 76, 74, 89, 48, 57]
+scaled_grades = []
+
+for grade in grades:
+  scaled_grade.append(grade + 10)
+print(scaled_grades)
+
+# On peut aussi utiliser les contitions if-else
+# avec les list comprehension
+# attention à la syntaxe!!!
+# Ex:
+numbers = [2, -1, 79, 33, -45]
+
+no_if   = [num * 2 for num in numbers] #s yntaxe normale sans if
+if_only = [num * 2 for num in numbers if num < 0] # syntaxe juste avec if qui se place APRÈS for... in ...
+if_else = [num * 2 if num < 0 else num * 3 for num in numbers] # syntaxe avec if ... else ... qui se place AVANT for
+
+
+
+# ======================
+# CE QUE J'AI COMPRIS
+# ======================
+
+
+
+
